@@ -107,7 +107,7 @@ def weight_convertor(value, from_unit, to_unit):
         "Pound": 0.453592,
         "Ounce": 0.0283495,
     }
-    return (value / weight_units[from_unit]) * weight_units[to_unit]
+    return (value * weight_units[from_unit]) / weight_units[to_unit]
 
 def temperature_convertor(value, from_unit, to_unit):
     if from_unit == "Celsius" and to_unit == "Fahrenheit":
