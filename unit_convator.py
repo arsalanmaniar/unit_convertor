@@ -67,9 +67,9 @@ col1, col2 = st.columns(2)
 
 if conversion_type == "Length":
     with col1:
-        from_unit = st.selectbox("From Unit", ["Meter", "Kilometer", "Centimeter", "Millimeter", "Micrometer", "Nanometer", "Yards", "Iches", "Feet", "Miles"])
+        from_unit = st.selectbox("From Unit", ["Meter", "Kilometer", "Centimeter", "Millimeter", "Micrometer", "Nanometer", "Yards", "Inches", "Feet", "Miles"])
     with col2:
-        to_unit = st.selectbox("To Unit", ["Meter", "Kilometer", "Centimeter", "Millimeter", "Micrometer", "Nanometer", "Yrds", "Inches", "Feet", "Miles"])
+        to_unit = st.selectbox("To Unit", ["Meter", "Kilometer", "Centimeter", "Millimeter", "Micrometer", "Nanometer", "Yards", "Inches", "Feet", "Miles"])
 elif conversion_type == "Weight":
     with col1:
         from_unit = st.selectbox("From Unit", ["Kilogram", "Gram", "Milligram", "Microgram", "Pound", "Ounce"])
