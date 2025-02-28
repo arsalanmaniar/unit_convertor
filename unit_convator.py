@@ -62,7 +62,7 @@ st.write("Easily convert between different units of length, weight, and temperat
 
 # SideBar
 conversion_type = st.sidebar.selectbox("Choose Conversion Type", ["Length", "Weight", "Temperature"])
-value = st.number_input("Enter Value", value=0.0, step=0.1)
+value = st.number_input("Enter Value", min_value=0.0, value=0.0, step=0.1)
 col1, col2 = st.columns(2)
 
 if conversion_type == "Length":
@@ -104,8 +104,8 @@ def weight_convertor(value, from_unit, to_unit):
         "Gram": 0.001,
         "Milligram": 0.000001,
         "Microgram": 0.000000001,
-        "Pound": 2.20462,
-        "Ounce": 35.274,
+        "Pound": 0.453592,
+        "Ounce": 0.0283495,
     }
     return (value / weight_units[from_unit]) * weight_units[to_unit]
 
