@@ -95,7 +95,7 @@ def length_convertor(value, from_unit, to_unit):
         "Foot": 0.3048,
         "Mile": 1609.34,
     }
-    return (value / length_units[from_unit]) * length_units[to_unit]
+    return (value * length_units[from_unit]) / length_units[to_unit]
 
 
 def weight_convertor(value, from_unit, to_unit):
