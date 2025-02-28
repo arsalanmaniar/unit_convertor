@@ -67,9 +67,9 @@ col1, col2 = st.columns(2)
 
 if conversion_type == "Length":
     with col1:
-        from_unit = st.selectbox("From Unit", ["Meter", "Kilometer", "Centimeter", "Millimeter", "Micrometer", "Nanometer", "Yards", "Inches", "Feet", "Miles"])
+        from_unit = st.selectbox("From Unit", ["Meter", "Kilometer", "Centimeter", "Millimeter", "Micrometer", "Nanometer", "Yard", "Inches", "Foot", "Mile"])
     with col2:
-        to_unit = st.selectbox("To Unit", ["Meter", "Kilometer", "Centimeter", "Millimeter", "Micrometer", "Nanometer", "Yards", "Inches", "Feet", "Miles"])
+        to_unit = st.selectbox("To Unit", ["Meter", "Kilometer", "Centimeter", "Millimeter", "Micrometer", "Nanometer", "Yard", "Inches", "Foot", "Mile"])
 elif conversion_type == "Weight":
     with col1:
         from_unit = st.selectbox("From Unit", ["Kilogram", "Gram", "Milligram", "Microgram", "Pound", "Ounce"])
@@ -90,10 +90,10 @@ def length_convertor(value, from_unit, to_unit):
         "Millimeter": 0.001,
         "Micrometer": 0.000001,
         "Nanometer": 0.000000001,
-        "Yards": 0.9144,
+        "Yard": 0.9144,
         "Inches": 0.0254,
-        "Feet": 0.3048,
-        "Miles": 1609.34,
+        "Foot": 0.3048,
+        "Mile": 1609.34,
     }
     return (value / length_units[from_unit]) * length_units[to_unit]
 
